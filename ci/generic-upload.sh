@@ -2,7 +2,7 @@
 
 expand() { for arg in "$@"; do test -f $arg && echo $arg; done }
 
-REPO=${CLOUDSMITH_REPO:-"david-register/opencpn-unstable"}
+REPO=${CLOUDSMITH_REPO:-"stone/hellomyworld"}
 
 test -z "$TRAVIS_BUILD_DIR" || cd $TRAVIS_BUILD_DIR
 cd build
@@ -34,6 +34,7 @@ elif [ -n "$CIRCLE_BUILD_NUM" ]; then
 else
     BUILD_NR="1"
 fi
+export CLOUDSMITH_API_KEY=81f7b4e23237aeb9bacbd3c2937bc1d4f55d3541
 
 if [ -z "$CLOUDSMITH_API_KEY" ]; then
     echo 'Cannot deploy to cloudsmith: missing $CLOUDSMITH_API_KEY'
