@@ -89,9 +89,11 @@ jobs:
     steps:
       - checkout
       - run: ci/circleci-build-android-corelib-armhf.sh
+      - run: ci/generic-upload.sh
       - store_artifacts:
           path: ./build
           destination: android-build
+        
 
   build-macos:
     macos:
@@ -186,9 +188,6 @@ workflows:
           <<: *std-filters
 
       - build-jammy:
-          <<: *std-filters
-
-      - build-flatpak:
           <<: *std-filters
 
       - build-android-armhf:
