@@ -50,6 +50,9 @@ jobs:
       - run: cat /etc/apt/sources.list
       - run: ci/generic-build-debian.sh
       - run: ci/generic-upload.sh
+      - store_artifacts:
+          path: ./build
+          destination: linux-build
 
   build-flatpak:
     working_directory: ~/OpenCPN
@@ -86,6 +89,9 @@ jobs:
     steps:
       - checkout
       - run: ci/circleci-build-android-corelib-armhf.sh
+      - store_artifacts:
+          path: ./build
+          destination: android-build
 
   build-macos:
     macos:
