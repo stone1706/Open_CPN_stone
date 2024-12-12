@@ -181,20 +181,8 @@ workflows:
   version: 2
   build_all:
     jobs:
-      - build-bookworm:
-          <<: *std-filters
-
-      - build-focal:
-          <<: *std-filters
-
       - build-jammy:
           <<: *std-filters
 
       - build-android-armhf:
-          <<: *std-filters
-
-      - build-macos-universal:
-          <<: *std-filters
-
-      - build-macos-intel-legacy:
           <<: *std-filters
