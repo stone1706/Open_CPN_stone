@@ -2162,19 +2162,20 @@ CatalogMgrPanel::CatalogMgrPanel(wxWindow* parent)
   itemStaticBoxSizer4->Add(rowSizer2,
                            wxSizerFlags().Expand().Border().Proportion(1));
 
-  m_updateButton = new wxButton(this, wxID_ANY, _("Update Plugin Catalog"),
+  m_updateButton = new wxButton(this, wxID_ANY, _("Update Plugin 2024"),
                                 wxDefaultPosition, wxDefaultSize, 0);
   rowSizer2->Add(m_updateButton, 0, wxALIGN_LEFT);
   m_updateButton->Bind(wxEVT_COMMAND_BUTTON_CLICKED,
                        &CatalogMgrPanel::OnUpdateButton, this);
-  rowSizer2->AddSpacer(4 * GetCharWidth());
+  rowSizer2->AddSpacer(4);
   m_tarballButton = new wxButton(this, wxID_ANY, _("Import plugin..."),
                                  wxDefaultPosition, wxDefaultSize, 0);
   rowSizer2->Add(m_tarballButton, 0, wxALIGN_LEFT | wxLEFT, 2 * GetCharWidth());
   m_tarballButton->Bind(wxEVT_COMMAND_BUTTON_CLICKED,
                         &CatalogMgrPanel::OnTarballButton, this);
+  wxMessageBox(_("Andriod"), _("Enable plugin"));
 
-  rowSizer2->AddSpacer(4 * GetCharWidth());
+  rowSizer2->AddSpacer(4);
   m_adv_button = new wxButton(this, wxID_ANY, _("Settings..."),
                               wxDefaultPosition, wxDefaultSize, 0);
   ConfigVar<bool> expert("/PlugIns", "CatalogExpert", pConfig);
