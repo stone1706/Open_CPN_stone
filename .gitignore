@@ -13,6 +13,11 @@ buildwin/crashrpt/CrashSender1402.exe
 buildwin/configdev.bat
 build-*
 cache
+cache/
+cache/*
+src
+src/
+src/*
 cmake-build-*
 crowdin.yaml
 cscope.files
