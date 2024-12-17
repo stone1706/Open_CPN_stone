@@ -1367,6 +1367,10 @@ void OCPNPlatform::SetDefaultOptions(void) {
   //  Enable some default PlugIns, and their default options
 
   if (pConfig) {
+        
+    pConfig->SetPath(_T ( "/PlugIns" ));
+    pConfig->Write(_T ( "CatalogExpert" ), true);
+
     pConfig->SetPath(_T ( "/PlugIns/libchartdldr_pi.so" ));
     pConfig->Write(_T ( "bEnabled" ), true);
 
@@ -1383,8 +1387,6 @@ void OCPNPlatform::SetDefaultOptions(void) {
     pConfig->SetPath(_T ( "/PlugIns/libdashboard_pi.so" ));
     pConfig->Write(_T ( "bEnabled" ), true);
 
-    pConfig->SetPath(_T ( "/PlugIns/libSonar_pi.so" ));
-    pConfig->Write(_T ( "bEnabled" ), true);
 
     pConfig->SetPath(_T ( "/PlugIns/GRIB" ));
     pConfig->Write(_T ( "GRIBCtrlBarPosX" ), 100);

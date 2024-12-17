@@ -2207,7 +2207,7 @@ CatalogMgrPanel::CatalogMgrPanel(wxWindow* parent)
 #else  // __ANDROID__
   SetBackgroundColour(wxColour(0x7c, 0xb0, 0xe9));  // light blue
   ConfigVar<bool> expert("/PlugIns", "CatalogExpert", pConfig);
-  if (0) {
+  if (!expert.Get(false)) {
     m_updateButton =
         new wxButton(this, wxID_ANY, _("Update Plugin false"),
                      wxDefaultPosition, wxDefaultSize, 0);
