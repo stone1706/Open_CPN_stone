@@ -2207,9 +2207,9 @@ CatalogMgrPanel::CatalogMgrPanel(wxWindow* parent)
 #else  // __ANDROID__
   SetBackgroundColour(wxColour(0x7c, 0xb0, 0xe9));  // light blue
   ConfigVar<bool> expert("/PlugIns", "CatalogExpert", pConfig);
-  if (!expert.Get(false)) {
+  if (0) {
     m_updateButton =
-        new wxButton(this, wxID_ANY, _("Update Plugin Catalog: master"),
+        new wxButton(this, wxID_ANY, _("Update Plugin false"),
                      wxDefaultPosition, wxDefaultSize, 0);
     itemStaticBoxSizer4->Add(m_updateButton, 0, wxALIGN_LEFT);
     m_updateButton->Bind(wxEVT_COMMAND_BUTTON_CLICKED,
@@ -2225,7 +2225,7 @@ CatalogMgrPanel::CatalogMgrPanel(wxWindow* parent)
     // m_catalogText->SetLabel(GetCatalogText(false));
 
     m_updateButton = new wxButton(
-        this, wxID_ANY, "Update Plugin Catalog:master                ",
+        this, wxID_ANY, "Update Plugin 2024 true",
         wxDefaultPosition, wxDefaultSize, 0);
     itemStaticBoxSizer4->Add(m_updateButton, 0, wxALIGN_LEFT | wxTOP, 5);
     m_updateButton->Bind(wxEVT_COMMAND_BUTTON_CLICKED,
