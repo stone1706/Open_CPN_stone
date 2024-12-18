@@ -2438,7 +2438,7 @@ wxString CatalogMgrPanel::GetCatalogText(bool updated) {
 }
 
 void CatalogMgrPanel::SetUpdateButtonLabel() {
-  wxString label = _("Update Plugin Catalog");
+  wxString label = _("Update Plugin 2024");
   label += _T(": ");
   label += g_catalog_channel == "" ? "master" : g_catalog_channel;
   m_updateButton->SetLabel(label);

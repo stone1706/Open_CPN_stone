@@ -1387,6 +1387,8 @@ void OCPNPlatform::SetDefaultOptions(void) {
     pConfig->SetPath(_T ( "/PlugIns/libdashboard_pi.so" ));
     pConfig->Write(_T ( "bEnabled" ), true);
 
+    pConfig->SetPath(_T ( "/PlugIns/libSonar_pi.so" ));
+    pConfig->Write(_T ( "bEnabled" ), true);
 
     pConfig->SetPath(_T ( "/PlugIns/GRIB" ));
     pConfig->Write(_T ( "GRIBCtrlBarPosX" ), 100);
